@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New album{% endblock %}
+
+{% block body %}
+ <link href="{{ asset('main.css') }}" rel="stylesheet"/>
+
+ <div class="w-50 p-3" style="background-color: #eee;">
+ {{ form_start(form)}}
+
+ {{ form_row(form.name) }}
+ {{ form_row(form.releaseDate)}}
+
+ {{ form_row(form.artist) }}
+
+ {{ form_end(form) }}
+ </div>
+{% endblock %}
+

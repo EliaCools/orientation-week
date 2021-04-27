@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    <table>
+
+        <th>Album name</th>
+        <th>Release date</th>
+        <th>Artist</th>
+        {% for  album in albums %}
+            <tr>
+                <td>{{ album.name }} </td>
+                <td>{{ album.releaseDate|date("d/m/Y") }}</td>
+                <td>{{ album.artist }}</td>
+                <td><a href="album/edit/{{ album.id }}">edit</a></td>
+                <td><a href="album/delete/{{ album.id }}">delete</a></td>
+            </tr>
+
+        {% endfor %}
+    </table>
+
+    <a href="album">add new album</a>
+{% endblock %}
