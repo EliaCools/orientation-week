@@ -1,0 +1,17 @@
+body {
+  margin: 0 auto;
+  max-width: 80vw;
+}
+
+input {
+  width: 50%;
+  display: block;
+  margin: 10px;
+  height: 30px;
+}
+
+button {
+  margin: 10px;
+}
+
+/*# sourceMappingURL=edit-game.component.css.map */

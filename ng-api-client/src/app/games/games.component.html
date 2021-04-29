@@ -1,0 +1,24 @@
+
+<body>
+<p>All Games</p>
+
+<button routerLink="new-game"> add new game </button>
+
+<div id="game-container">
+<div *ngFor="let game of allGames" class="games">
+
+  <div class="image-container"><img class="game-image" src="{{game.image}}"></div>
+
+  <h3> {{game.name}} </h3>
+
+
+  <p ><span class="description">genre:</span>  {{game.genre}} </p>
+  <p><span  class="description">developer:</span> {{game.developer}}</p>
+  <p ><span class="description"> release date:</span> {{game.releasedate.substr(0, 10)}}</p>
+
+  <button (click)="deleteGame(game.id)" class="ud-buttons">delete</button>
+  <button [routerLink]="['edit-game']" [queryParams]="{ id: game.id }" (click)="getGame(game.id)" class="ud-buttons">edit</button>
+
+</div>
+</div>
+</body>
