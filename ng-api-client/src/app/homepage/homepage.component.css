@@ -1,0 +1,63 @@
+
+#home-image {
+
+  height: 80vh;
+  max-width: 100vw;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#greeting {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  background-color: hsl(40, 80%, 85%);
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+h2 {
+  margin-top: 0;
+  padding-top: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+h3 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 3em;
+  font-family: 'Antonio', sans-serif;
+}
+
+h3:hover {
+  font-size: 3.5em;
+  cursor: pointer;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+#link {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 60vh;
+  width: 100vw;
+  background-color: hsl(40, 80%, 91%);
+  align-items: center;
+  justify-content: center;
+}
+
+

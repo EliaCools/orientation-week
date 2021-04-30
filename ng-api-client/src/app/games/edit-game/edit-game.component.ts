@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Game} from '../../entitys/game';
 import {CrudGameService} from '../../services/crud-game.service';
 import {ActivatedRoute} from '@angular/router';
@@ -14,14 +14,19 @@ export class EditGameComponent implements OnInit {
   singleGame;
   formatdate;
   message;
-  constructor(private CrudGamesService: CrudGameService, private route: ActivatedRoute) { }
 
-  editGame(id): void{
+  constructor(private CrudGamesService: CrudGameService, private route: ActivatedRoute) {
+  }
+
+  editGame(id): void {
     this.CrudGamesService.editGame(this.gameModel, id).subscribe(succes => this.message = 'Game added',
       error => console.log('it did not work'));
-    setTimeout(() => {this.message = ' '; } , 2000);
+    setTimeout(() => {
+      this.message = ' ';
+    }, 2000);
   }
-  getGame(id): void{
+
+  getGame(id): void {
     this.CrudGamesService.getGame(id).subscribe(game => this.singleGame = game);
   }
 

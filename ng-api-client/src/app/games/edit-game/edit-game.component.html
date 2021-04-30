@@ -2,17 +2,22 @@
 <body>
 <form #gameForm="ngForm" (ngSubmit)="editGame(id)">
   <label for="name">name</label>
-  <input  name="name"  type="text" id="name" #name="ngModel" ngModel [(ngModel)]="gameModel.name" value="{{singleGame?.name}}" required minlength="3" [class.yourClassName]="name.invalid"  >
+  <input name="name" type="text" id="name" #name="ngModel" ngModel [(ngModel)]="gameModel.name"
+         value="{{singleGame?.name}}" required minlength="3" [class.yourClassName]="name.invalid">
   <label for="releasedate">releasedate</label>
-  <input  type="date" id="releasedate" name="releasedate" #releasedate="ngModel" [(ngModel)]="gameModel.releasedate" value="{{singleGame?.releasedate.substr(0, 10)}}" required ngModel [class.yourClassName]="releasedate.invalid" >
+  <input type="date" id="releasedate" name="releasedate" #releasedate="ngModel" [(ngModel)]="gameModel.releasedate"
+         value="{{singleGame?.releasedate.substr(0, 10)}}" required ngModel [class.yourClassName]="releasedate.invalid">
   <label for="genre">genre</label>
-  <input type="text" id="genre" name="genre" #genre="ngModel" ngModel [(ngModel)]="gameModel.genre" value="{{singleGame?.genre}}" required minlength="3" [class.yourClassName]="genre.invalid">
+  <input type="text" id="genre" name="genre" #genre="ngModel" ngModel [(ngModel)]="gameModel.genre"
+         value="{{singleGame?.genre}}" required minlength="3" [class.yourClassName]="genre.invalid">
   <label for="developer">developer</label>
-  <input #developer="ngModel" ngModel [(ngModel)]="gameModel.developer" [class.yourClassName]="developer.invalid" value="{{singleGame?.developer}}" required minlength="3" type="text" id="developer" name="developer" >
+  <input #developer="ngModel" ngModel [(ngModel)]="gameModel.developer" [class.yourClassName]="developer.invalid"
+         value="{{singleGame?.developer}}" required minlength="3" type="text" id="developer" name="developer">
   <label for="image">image</label>
-  <input #image="ngModel" ngModel [(ngModel)]="gameModel.image" [class.yourClassName]="image.invalid" value="{{singleGame?.image}}" required minlength="3" type="text" id="image" name="image" >
-  <button type="submit" [disabled]="gameForm.invalid"  > submit </button>
-  <button routerLink="/games" > back to games</button>
+  <input #image="ngModel" ngModel [(ngModel)]="gameModel.image" [class.yourClassName]="image.invalid"
+         value="{{singleGame?.image}}" required minlength="3" type="text" id="image" name="image">
+  <button type="submit" [disabled]="gameForm.invalid"> submit</button>
+  <button routerLink="/games"> back to games</button>
 </form>
 {{message}}
 </body>

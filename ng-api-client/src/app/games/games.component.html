@@ -1,24 +1,27 @@
+<div id="page">
+  <div id="page-head">
+    <p>All Games</p>
+    <button routerLink="new-game" id="add-button"> add new game</button>
+  </div>
 
-<body>
-<p>All Games</p>
+  <div id="game-container">
+    <div *ngFor="let game of allGames" class="games-container">
 
-<button routerLink="new-game"> add new game </button>
+      <div class="image-container"><img class="game-image" src="{{game.image}}"></div>
 
-<div id="game-container">
-<div *ngFor="let game of allGames" class="games">
-
-  <div class="image-container"><img class="game-image" src="{{game.image}}"></div>
-
-  <h3> {{game.name}} </h3>
+      <h3> {{game.name}} </h3>
 
 
-  <p ><span class="description">genre:</span>  {{game.genre}} </p>
-  <p><span  class="description">developer:</span> {{game.developer}}</p>
-  <p ><span class="description"> release date:</span> {{game.releasedate.substr(0, 10)}}</p>
+      <p><span class="description">genre:</span>  {{game.genre}} </p>
+      <p><span class="description">developer:</span> {{game.developer}}</p>
+      <p><span class="description"> release date:</span> {{game.releasedate.substr(0, 10)}}</p>
 
-  <button (click)="deleteGame(game.id)" class="ud-buttons">delete</button>
-  <button [routerLink]="['edit-game']" [queryParams]="{ id: game.id }" (click)="getGame(game.id)" class="ud-buttons">edit</button>
+      <button (click)="deleteGame(game.id)" class="ud-buttons button-danger">delete</button>
+      <button [routerLink]="['edit-game']" [queryParams]="{ id: game.id }" (click)="getGame(game.id)"
+              class="ud-buttons button-neutral">
+        edit
+      </button>
 
+    </div>
+  </div>
 </div>
-</div>
-</body>

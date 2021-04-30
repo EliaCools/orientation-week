@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FormAddGameComponent } from './form-add-game.component';
+import {FormAddGameComponent} from './form-add-game.component';
 
 describe('FormAddGameComponent', () => {
   let component: FormAddGameComponent;
@@ -8,9 +8,9 @@ describe('FormAddGameComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormAddGameComponent ]
+      declarations: [FormAddGameComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

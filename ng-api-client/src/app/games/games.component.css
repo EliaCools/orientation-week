@@ -1,5 +1,6 @@
-body {
+#page {
   margin: 0 auto;
+  padding: 0;
   max-width: 80vw;
 }
 
@@ -9,10 +10,16 @@ body {
   flex-wrap: wrap;
 }
 
-.games {
+.games-container {
   padding: 20px;
   box-sizing: border-box;
   width: 20vw;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.games-container:hover {
+  box-shadow: 10px 10px 10px darkgrey;
 }
 
 h3 {
@@ -23,8 +30,40 @@ p {
   font-size: 20px;
 }
 
+#page-head {
+  display: flex;
+  flex-direction: row;
+}
+
+#add-button {
+  max-width: 150px;
+  max-height: 35px;
+  margin-left: 30vw;
+  align-self: center;
+  border-radius: 4px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 .ud-buttons {
   margin: 5px;
+  border-radius: 3px;
+}
+
+.button-danger {
+  background-color: #e87d7d;
+  cursor: crosshair;
+}
+
+.button-danger:hover {
+  background-color: #ff6666;
+  cursor: crosshair;
+}
+
+.button-neutral {
+  background-color: #eceef9;
 }
 
 .description {

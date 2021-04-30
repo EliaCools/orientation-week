@@ -1,14 +1,15 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Game} from '../entitys/game';
 import {Observable, of} from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {catchError, map, tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CrudGameService {
   private gamesUrl = 'http://symfonyapi.local/index.php/game';
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error); // log to console instead
@@ -24,6 +25,7 @@ export class CrudGameService {
       catchError(this.handleError<Game[]>('getGames', []))
     );
   }
+
   getGame(id: string): Observable<Game[]> {
     const url = `${this.gamesUrl}/${id}`;
     return this.http.get<Game[]>(url).pipe(tap(_ => console.log('fetched games')),
@@ -34,9 +36,11 @@ export class CrudGameService {
   addGame(game: Game): Observable<any> {
     return this.http.post<Game>(this.gamesUrl, game);
   }
+
   editGame(game: Game, id: string): Observable<any> {
     return this.http.put<Game>(this.gamesUrl + '/' + id, game);
   }
+
   deleteGame(id: string): Observable<any> {
     const url = `${this.gamesUrl}/${id}`;
     return this.http.delete<Game>(url);

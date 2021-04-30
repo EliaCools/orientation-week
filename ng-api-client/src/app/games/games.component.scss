@@ -1,45 +1,88 @@
-body{
-margin:0 auto;
+#page {
+  margin: 0 auto;
+  padding: 0;
   max-width: 80vw;
 }
 
-#game-container{
+#game-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
 
-.games{
+
+.games-container {
   padding: 20px;
   box-sizing: border-box;
-  width:20vw;
-
+  width: 20vw;
+  overflow: hidden;
+  border-radius: 6px;
 
 }
 
-h3{
+.games-container:hover {
+  box-shadow: 10px 10px 10px darkgrey;
+}
+
+
+h3 {
   text-align: center;
 }
 
-p{
-  font-size:20px;
+p {
+  font-size: 20px;
 }
 
-.ud-buttons{
-  margin:5px;
+#page-head {
+  display: flex;
+  flex-direction: row;
 
 }
 
-.description{
+#add-button {
+  max-width: 150px;
+  max-height: 35px;
+  margin-left: 30vw;
+  align-self: center;
+  border-radius: 4px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+.ud-buttons {
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.button-danger {
+  background-color: hsl(0, 70, 70);
+  cursor: crosshair;
+}
+
+.button-danger:hover {
+  background-color: hsl(0, 100, 70);
+  cursor: crosshair;
+}
+
+.button-neutral {
+  background-color: hsl(231, 51, 95);
+}
+
+.description {
   font-weight: bold;
 
 }
 
 
-.game-image{
-  height:200px;
-  width:19vw;
-  background-color:darkgrey;
+.game-image {
+  height: 200px;
+  width: 19vw;
+  background-color: darkgrey;
   margin: 0 auto;
 }
+
+
+

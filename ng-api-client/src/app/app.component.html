@@ -1,11 +1,21 @@
+<!DOCTYPE html>
 
-<h1>
-  {{title}}
-</h1>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="app.component.scss">
+</head>
 
-<button routerLink="/games">games</button>
-<button routerLink="">Home</button>
 
+<header>
+  <h1 routerLink="/homepage">
+    Game<span class="logo-red">Start</span>
+  </h1>
+  <nav>
+    <p class="nav" routerLink="games">All Games</p>
+  </nav>
+</header>
+<div id="space-filler"></div>
 <router-outlet></router-outlet>
 
 

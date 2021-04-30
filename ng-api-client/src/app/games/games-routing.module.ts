@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { GamesComponent } from './games.component';
-import { FormAddGameComponent} from './form-add-game/form-add-game.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {GamesComponent} from './games.component';
+import {FormAddGameComponent} from './form-add-game/form-add-game.component';
 import {EditGameComponent} from './edit-game/edit-game.component';
 
 const routes: Routes = [
-  { path: '', component: GamesComponent
+  {
+    path: '', component: GamesComponent
   },
   {
     path: 'new-game', component: FormAddGameComponent
@@ -20,4 +21,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class GamesRoutingModule { }
+export class GamesRoutingModule {
+}
